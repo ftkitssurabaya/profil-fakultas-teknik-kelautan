@@ -1,1 +1,0 @@
-"#profil-fakultas-teknik-kelautan"
