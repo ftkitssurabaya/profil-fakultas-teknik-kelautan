@@ -12,7 +12,9 @@
 }
 
 body {
-    min-height: 100vh;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,40 +22,50 @@ body {
     padding: 20px;
     overflow: hidden;
 
-    background: linear-gradient(
-        135deg,
-        #0F172A 0%,
-        #1E3A8A 45%,
-        #38BDF8 100%
-    );
+    /* Background utama tetap ada sebagai fallback */
+    background-image: url('/assets/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    position: relative; 
 }
 
-/* Glow Background */
+/* Layer Blur Background */
 body::before {
     content: '';
-    position: fixed;
-    width: 320px;
-    height: 320px;
-    background: rgba(59,130,246,0.35);
-    border-radius: 50%;
-    top: -100px;
-    left: -100px;
-    filter: blur(100px);
-    z-index: -1;
+    position: fixed; /* Ubah dari relative ke fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    
+    /* Efek Blur */
+    filter: blur(20px);
+    
+    /* Scale sedikit supaya pinggiran blur tidak putih/bolong */
+    transform: scale(1.1); 
+    
+    /* Pastikan di paling belakang tapi di depan background body */
+    z-index: -2; 
 }
 
+/* Layer Overlay Gelap (Opsional: agar teks putih lebih kontras) */
 body::after {
     content: '';
     position: fixed;
-    width: 320px;
-    height: 320px;
-    background: rgba(14,165,233,0.35);
-    border-radius: 50%;
-    bottom: -100px;
-    right: -100px;
-    filter: blur(100px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Memberi sedikit tone gelap */
     z-index: -1;
 }
+
+
 
 /* CONTAINER */
 .slider-container {
@@ -66,11 +78,13 @@ body::after {
     height: 90vh;
     max-height: 820px;
 
-    background: rgba(255,255,255,0.12);
+    background-image: url(/assets/background.jpeg);
+    background-size: cover;
 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.2);
 
     border-radius: 32px;
@@ -90,6 +104,8 @@ body::after {
 
     transition: transform 0.4s ease-out;
     will-change: transform;
+
+    
 }
 
 /* SLIDE */
