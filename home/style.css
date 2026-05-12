@@ -23,7 +23,7 @@ body {
     overflow: hidden;
 
     /* Background utama tetap ada sebagai fallback */
-    background-image: url('assets/background.jpeg');
+    background-image: url('/home/assets/background.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('assets/background.jpeg');
+    background-image: url('/home/assets/background.jpeg');
     background-size: cover;
     background-position: center;
     
@@ -78,7 +78,7 @@ body::after {
     height: 90vh;
     max-height: 820px;
 
-    background-image: url('assets/background.jpeg');
+    background-image: url('/home/assets/background.jpeg');
     background-size: cover;
 
     backdrop-filter: blur(20px);
