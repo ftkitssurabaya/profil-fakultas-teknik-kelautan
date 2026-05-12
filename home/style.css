@@ -23,7 +23,11 @@ body {
     overflow: hidden;
 
     /* Background utama tetap ada sebagai fallback */
+<<<<<<< HEAD
     background-image: url('assets/background.jpeg');
+=======
+    background-image: url('home/assets/background.jpeg');
+>>>>>>> b4d9a5f27efc2cd969c8faec8c6b360ee272b8f6
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +43,11 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
+<<<<<<< HEAD
     background-image: url('assets/background.jpeg');
+=======
+    background-image: url('home/assets/background.jpeg');
+>>>>>>> b4d9a5f27efc2cd969c8faec8c6b360ee272b8f6
     background-size: cover;
     background-position: center;
     
@@ -78,7 +86,11 @@ body::after {
     height: 90vh;
     max-height: 820px;
 
+<<<<<<< HEAD
     background-image: url('assets/background.jpeg');
+=======
+    background-image: url('home/assets/background.jpeg');
+>>>>>>> b4d9a5f27efc2cd969c8faec8c6b360ee272b8f6
     background-size: cover;
 
     backdrop-filter: blur(20px);
@@ -570,4 +582,8 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b4d9a5f27efc2cd969c8faec8c6b360ee272b8f6
