@@ -207,6 +207,13 @@ h1 {
     letter-spacing: 0.4px;
 }
 
+.slogan{
+    font-size: 0.90rem;
+    color:white;
+    margin-bottom: 32px;
+    letter-spacing: 0.4px;
+}
+
 .page-title {
     font-size: 1.25rem;
     font-weight: 700;
